@@ -9,9 +9,9 @@ generator client {
 }
 
 model Post {
-  id      Int       @id @default(autoincrement())
-  title   String
-  Comment Comment[]
+  id       Int       @id @default(autoincrement())
+  title    String
+  comments Comment[]
 }
 
 model Comment {

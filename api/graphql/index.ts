@@ -12,9 +12,7 @@ export const Post = objectType({
   definition(t) {
     t.model.id();
     t.model.title();
-    t.model.Comment({
-      alias: "comments",
-    });
+    t.model.comments();
   },
 });
 
