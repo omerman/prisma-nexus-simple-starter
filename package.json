@@ -20,14 +20,14 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@prisma/client": "^2.15.0",
+    "@prisma/client": "2.14.0",
     "apollo-server": "^2.19.2",
     "graphql": "^15.5.0",
     "nexus": "^1.0.0",
-    "nexus-plugin-prisma": "^0.29.0"
+    "nexus-plugin-prisma": "0.28.0"
   },
   "devDependencies": {
-    "@prisma/cli": "^2.15.0",
+    "@prisma/cli": "2.14.0",
     "@types/jest": "^26.0.20",
     "@types/pg": "^7.14.9",
     "get-port": "^5.1.1",

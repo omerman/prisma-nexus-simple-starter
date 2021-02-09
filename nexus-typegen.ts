@@ -21,7 +21,7 @@ declare global {
 export interface NexusGenInputs {
   CommentCreateInput: { // input type
     info: string; // String!
-    post: NexusGenInputs['PostCreateOneWithoutCommentInput']; // PostCreateOneWithoutCommentInput!
+    post: NexusGenInputs['PostCreateOneWithoutCommentsInput']; // PostCreateOneWithoutCommentsInput!
   }
   CommentCreateManyWithoutPostInput: { // input type
     connect?: NexusGenInputs['CommentWhereUniqueInput'][] | null; // [CommentWhereUniqueInput!]
@@ -39,19 +39,19 @@ export interface NexusGenInputs {
     id?: number | null; // Int
   }
   PostCreateInput: { // input type
-    Comment?: NexusGenInputs['CommentCreateManyWithoutPostInput'] | null; // CommentCreateManyWithoutPostInput
+    comments?: NexusGenInputs['CommentCreateManyWithoutPostInput'] | null; // CommentCreateManyWithoutPostInput
     title: string; // String!
   }
-  PostCreateOneWithoutCommentInput: { // input type
+  PostCreateOneWithoutCommentsInput: { // input type
     connect?: NexusGenInputs['PostWhereUniqueInput'] | null; // PostWhereUniqueInput
-    connectOrCreate?: NexusGenInputs['PostCreateOrConnectWithoutCommentInput'] | null; // PostCreateOrConnectWithoutCommentInput
-    create?: NexusGenInputs['PostCreateWithoutCommentInput'] | null; // PostCreateWithoutCommentInput
+    connectOrCreate?: NexusGenInputs['PostCreateOrConnectWithoutcommentsInput'] | null; // PostCreateOrConnectWithoutcommentsInput
+    create?: NexusGenInputs['PostCreateWithoutCommentsInput'] | null; // PostCreateWithoutCommentsInput
   }
-  PostCreateOrConnectWithoutCommentInput: { // input type
-    create: NexusGenInputs['PostCreateWithoutCommentInput']; // PostCreateWithoutCommentInput!
+  PostCreateOrConnectWithoutcommentsInput: { // input type
+    create: NexusGenInputs['PostCreateWithoutCommentsInput']; // PostCreateWithoutCommentsInput!
     where: NexusGenInputs['PostWhereUniqueInput']; // PostWhereUniqueInput!
   }
-  PostCreateWithoutCommentInput: { // input type
+  PostCreateWithoutCommentsInput: { // input type
     title: string; // String!
   }
   PostWhereUniqueInput: { // input type

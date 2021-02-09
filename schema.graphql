@@ -11,7 +11,7 @@ type Comment {
 
 input CommentCreateInput {
   info: String!
-  post: PostCreateOneWithoutCommentInput!
+  post: PostCreateOneWithoutCommentsInput!
 }
 
 input CommentCreateManyWithoutPostInput {
@@ -45,22 +45,22 @@ type Post {
 }
 
 input PostCreateInput {
-  Comment: CommentCreateManyWithoutPostInput
+  comments: CommentCreateManyWithoutPostInput
   title: String!
 }
 
-input PostCreateOneWithoutCommentInput {
+input PostCreateOneWithoutCommentsInput {
   connect: PostWhereUniqueInput
-  connectOrCreate: PostCreateOrConnectWithoutCommentInput
-  create: PostCreateWithoutCommentInput
+  connectOrCreate: PostCreateOrConnectWithoutcommentsInput
+  create: PostCreateWithoutCommentsInput
 }
 
-input PostCreateOrConnectWithoutCommentInput {
-  create: PostCreateWithoutCommentInput!
+input PostCreateOrConnectWithoutcommentsInput {
+  create: PostCreateWithoutCommentsInput!
   where: PostWhereUniqueInput!
 }
 
-input PostCreateWithoutCommentInput {
+input PostCreateWithoutCommentsInput {
   title: String!
 }
 
